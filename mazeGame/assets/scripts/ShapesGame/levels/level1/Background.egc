@@ -1,0 +1,98 @@
+<Entity extends="std.display.Sprite2D">
+	<_States>
+		<_State id="spaceX"><Value>;2280/2</Value></_State>
+		<_State id="spaceY"><Value>;1440/2</Value></_State>
+	</_States>
+	
+	<Form><Space><Entities>
+		<!-- Sea -->
+		<Entity extends="std.display.Image2D">
+			<_States>
+				<_State id="touchable"><Value>false</Value></_State>
+				<_State id="physicsEntity"><Value>false</Value></_State>
+				<_State id="2DMeshImageForm"><Value>sea</Value></_State>
+				<_State id="spaceX"><Value>0</Value></_State> <!-- 0 -->
+				<_State id="spaceY"><Value>0</Value></_State> <!-- 130 -->
+				<_State id="scaleX"><Value>1</Value></_State>
+				<_State id="scaleY"><Value>1</Value></_State>
+			</_States>
+			<_Actions>
+				<_Action id="Constructor">
+					<_Scripts>
+						<Script><![CDATA[
+							for (var i=0;i<80;i++) //20
+							{
+								var f_wave = Logic.create('ShapesGame.levels.level1.Waves');
+								me.addChild(f_wave);
+							}
+							
+							for (var i=0;i<5;i++)
+							{
+								var f_fish = Logic.create('ShapesGame.levels.level1.Fish');
+								me.addChild(f_fish);
+							}
+						]]></Script>
+					</_Scripts>
+				</_Action>
+			</_Actions>
+		</Entity>
+		
+		<!-- Ice -->
+		<Entity extends="std.display.Image2D">
+			<_States>
+				<_State id="touchable"><Value>false</Value></_State>
+				<_State id="physicsEntity"><Value>false</Value></_State>
+				<_State id="2DMeshImageForm"><Value>ice</Value></_State>
+				<_State id="spaceX"><Value>625</Value></_State>
+				<_State id="spaceY"><Value>510</Value></_State>
+				<_State id="scaleX"><Value>1</Value></_State>
+				<_State id="scaleY"><Value>1</Value></_State>
+			</_States>
+		</Entity>
+		
+		<!-- Igloo -->
+		<Entity extends="std.display.Image2D">
+			<_States>
+				<_State id="touchable"><Value>false</Value></_State>
+				<_State id="physicsEntity"><Value>false</Value></_State>
+				<_State id="2DMeshImageForm"><Value>igloo</Value></_State>
+				<_State id="spaceX"><Value>-800</Value></_State>
+				<_State id="spaceY"><Value>-540</Value></_State>
+				<_State id="scaleX"><Value>1</Value></_State>
+				<_State id="scaleY"><Value>1</Value></_State>
+			</_States>
+		</Entity>
+		
+		<!-- Flags -->
+		<Entity extends="std.display.Image2D">
+			<_States>
+				<_State id="physicsEntity"><Value>false</Value></_State>
+				<_State id="2DMeshImageForm"><Value>flag1</Value></_State>
+				<_State id="spaceX"><Value>-770</Value></_State>
+				<_State id="spaceY"><Value>-500</Value></_State>
+				<_State id="scaleX"><Value>0.7</Value></_State>
+				<_State id="scaleY"><Value>0.7</Value></_State>
+			</_States>
+		</Entity>
+		
+		<Entity extends="std.display.Image2D">
+			<_States>
+				<_State id="physicsEntity"><Value>false</Value></_State>
+				<_State id="2DMeshImageForm"><Value>flag2</Value></_State>
+				<_State id="spaceX"><Value>685</Value></_State>
+				<_State id="spaceY"><Value>422</Value></_State>
+			</_States>
+		</Entity>
+	</Entities></Space></Form>
+		
+	<_Actions>
+		<_Action id="Constructor">
+			<_Scripts>
+				<Script>
+					//Hmmm..
+					
+				</Script>
+			</_Scripts>
+		</_Action>
+	</_Actions>
+</Entity>
